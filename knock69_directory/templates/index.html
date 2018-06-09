@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>{{title}}</title>
+</head>
+<body>
+
+<form action="/" method="get">
+    名前、別名：<input type="text" name="name"  size="20"/><br/>
+    タグ：<input type="text" name="tag" size="20"/><br/>
+    <input type="submit" value="検索"/>
+</form>
+
+<form action="/search2" method="post">
+    <hr/>
+    ($index件目/全$total件)<br/>
+    〔名前〕{{name}}<br/>
+    〔別名〕$aliases<br/>
+    〔活動場所〕$area<br/>
+    〔タグ〕{{tag}}<br/>
+    〔レーティング〕$rating<br/>
+</form>
+
+
+</body>
+</html>

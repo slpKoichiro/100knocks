@@ -1,0 +1,37 @@
+<html>
+   <body>
+   {% if output_flag == 1 %}
+   {% for r in result %}
+   <table border = 1>
+       <tr>
+        <th>名前</th>
+        <td> {{r['name']}} </td>
+       </tr>
+
+        <tr>
+        <th>別名</th>
+        {% for aliase in r['aliases'] %}
+            <td>{{aliase['name']}}</td>
+        {% endfor %}
+        </tr>
+
+        <tr>
+        <th>活動場所</th>
+        <td>{{r['area']}}</td>
+        </tr>
+
+        <tr>
+        <th>タグ</th>
+        {% for t in r['tags'] %}
+            <td>{{t['value']}}</td>
+        {% endfor %}
+        </tr>
+   </table>
+   </br>
+   {% endfor %}
+
+   {% else %}
+   <p>検索候補が見つかりませんでした.</p>
+   {% endif %}
+   </body>
+</html>
